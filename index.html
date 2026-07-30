@@ -53,15 +53,37 @@
   .pulse{animation:pulse 2.2s ease-in-out infinite;}
   @keyframes pulse{0%,100%{opacity:.35;}50%{opacity:1;}}
 
-  .lr-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0;transition:opacity .8s ease;background:#000;}
+  .lr-monitor{position:absolute;left:var(--m);top:25vh;width:56vw;aspect-ratio:16/9;background:#04070f;border:1px solid rgba(255,255,255,.16);border-radius:.6vw;overflow:hidden;box-shadow:inset 0 0 6vw rgba(0,0,0,.6);z-index:2;}
+  .lr-monitor img.lr-idle-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .5s ease;}
+  .lr-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease;background:#000;}
   .lr-video.is-live{opacity:1;}
-  .lr-badge{position:absolute;right:var(--m);top:11vh;z-index:3;width:11vw;background:rgba(11,24,48,.86);border:1px solid rgba(255,255,255,.16);border-radius:.6vw;padding:1vw;backdrop-filter:blur(6px);}
-  .lr-badge-head{display:flex;align-items:center;gap:.5vw;font:600 .78vw 'Space Grotesk',sans-serif;color:rgba(255,255,255,.75);letter-spacing:.04em;margin-bottom:.8vw;}
-  .lr-badge-qr{width:100%;background:#fff;border-radius:.35vw;padding:.4vw;display:flex;align-items:center;justify-content:center;min-height:8vw;}
-  .lr-badge-qr canvas,.lr-badge-qr img{display:block;width:100%;height:auto;}
-  .lr-badge-qr.lr-empty{font:500 .68vw 'Paperlogy',sans-serif;color:#667078;text-align:center;padding:1vw;}
-  .lr-badge-room{margin-top:.7vw;font:600 .78vw 'Space Grotesk',sans-serif;color:rgba(255,255,255,.6);letter-spacing:.08em;text-align:center;}
-  .lr-badge-room b{color:var(--mint);letter-spacing:.12em;}
+  .lr-video.is-live ~ .lr-idle-img{opacity:0;}
+  .lr-mon-marks{position:absolute;inset:1vw;pointer-events:none;}
+  .lr-mon-marks span{position:absolute;width:1.1vw;height:1.1vw;border:1px solid rgba(116,226,208,.4);}
+  .lr-mon-marks span:nth-child(1){top:0;left:0;border-right:0;border-bottom:0;}
+  .lr-mon-marks span:nth-child(2){top:0;right:0;border-left:0;border-bottom:0;}
+  .lr-mon-marks span:nth-child(3){bottom:0;left:0;border-right:0;border-top:0;}
+  .lr-mon-marks span:nth-child(4){bottom:0;right:0;border-left:0;border-top:0;}
+  .lr-mon-tally{position:absolute;top:0;left:0;right:0;height:.22vw;background:rgba(255,255,255,.15);transition:background .3s;z-index:3;}
+  .lr-mon-tally.is-live{background:var(--mint);box-shadow:0 0 1.2vw rgba(116,226,208,.6);}
+  .lr-mon-chip{position:absolute;left:1vw;top:1vw;z-index:3;display:flex;align-items:center;gap:.5vw;padding:.4vw .9vw;background:rgba(11,24,48,.75);border:1px solid rgba(255,255,255,.16);border-radius:2vw;font:600 .78vw 'Space Grotesk',sans-serif;color:rgba(255,255,255,.85);letter-spacing:.04em;backdrop-filter:blur(4px);}
+  .lr-mon-full{position:absolute;right:1vw;top:1vw;z-index:3;display:flex;align-items:center;gap:.4vw;padding:.4vw .9vw;background:rgba(11,24,48,.75);border:1px solid rgba(255,255,255,.16);border-radius:2vw;font:600 .78vw 'Space Grotesk',sans-serif;color:rgba(255,255,255,.85);letter-spacing:.02em;backdrop-filter:blur(4px);cursor:pointer;}
+  .lr-mon-full:hover{border-color:var(--mint);color:var(--mint);}
+  .lr-monitor:fullscreen{border-radius:0;aspect-ratio:auto;width:100vw;height:100vh;}
+  .lr-monitor:fullscreen .lr-video{object-fit:contain;}
+  .lr-mon-standby{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9vw;text-align:center;padding:2vw;z-index:2;background:rgba(4,7,15,.4);transition:opacity .4s ease;}
+  .lr-mon-standby.is-live{opacity:0;pointer-events:none;}
+  .lr-mon-standby h3{margin:0;font:700 1.6vw 'Paperlogy',sans-serif;color:#fff;letter-spacing:.02em;}
+  .lr-mon-standby p{margin:0;max-width:36ch;font:500 .88vw/1.6 'Paperlogy',sans-serif;color:rgba(255,255,255,.68);}
+
+  .lr-connect{position:absolute;right:var(--m);top:25vh;width:24vw;z-index:2;}
+  .lr-connect-label{font:600 .85vw 'Space Grotesk',sans-serif;color:var(--mint);letter-spacing:.06em;margin-bottom:1vh;}
+  .lr-connect-qr{background:#fff;border-radius:.5vw;padding:.8vw;display:flex;align-items:center;justify-content:center;min-height:13vw;}
+  .lr-connect-qr svg{width:100%;height:auto;display:block;}
+  .lr-connect-qr.lr-empty{font:500 .75vw 'Paperlogy',sans-serif;color:#667078;text-align:center;padding:1vw;}
+  .lr-connect-room{margin-top:1.2vh;font:600 .95vw 'Space Grotesk',sans-serif;color:#fff;letter-spacing:.12em;text-align:center;}
+  .lr-connect-room b{color:var(--mint);}
+  .lr-connect-help{margin-top:1.2vh;font:500 .82vw/1.6 'Paperlogy',sans-serif;color:rgba(255,255,255,.6);text-align:center;}
 
   #progress-track{position:fixed;left:0;bottom:0;width:100vw;height:.28vh;background:rgba(255,255,255,.12);z-index:50;}
   #progress-fill{height:100%;background:var(--mint);width:0;transition:width .4s cubic-bezier(.4,0,.2,1);}
@@ -201,14 +223,8 @@
   <!-- 5 · MVP LIVE DEMO (L-03, dark) -->
   <section class="slide slide--dark" data-index="5">
     <img class="bg" src="asset/14_MVP_기술시연_파이프라인_v1_1920x1080.png" alt="" />
-    <video class="lr-video" id="lrVideo" autoplay playsinline muted></video>
     <div class="label" data-anim>MVP LIVE DEMO</div>
     <h1 class="h-title wide" style="font-size:3vw;color:#fff;" data-anim>공간 이동이 제어로 이어지는 순간</h1>
-    <div class="lr-badge" data-anim>
-      <div class="lr-badge-head"><span class="dot" id="lrDot"></span><span id="lrBadgeState">연결 대기</span></div>
-      <div class="lr-badge-qr lr-empty" id="lrPlaque">코드 생성 중…</div>
-      <div class="lr-badge-room">ROOM <b id="lrRoomCode">······</b></div>
-    </div>
     <div style="position:absolute;left:var(--m);top:75vh;width:88vw;display:flex;justify-content:space-between;z-index:2;font:600 1.2vw 'Paperlogy',sans-serif;color:rgba(255,255,255,.88);" data-anim>
       <span>공간 A</span><span style="color:var(--cyan);">→</span><span>사용자 이동</span><span style="color:var(--cyan);">→</span><span>공간 B 판단</span><span style="color:var(--cyan);">→</span><span>유예시간</span><span style="color:var(--cyan);">→</span><span>허용 플러그 OFF</span><span style="color:var(--cyan);">→</span><span>앱 결과</span>
     </div>
@@ -216,8 +232,35 @@
     <div class="pgnum">05</div>
   </section>
 
-  <!-- 6 · 기술 파이프라인 (L-03/04 hybrid, dark) -->
+  <!-- 6 · LIVE RELAY (dark) — 실시간 화면 중계 전용 페이지 -->
   <section class="slide slide--dark" data-index="6">
+    <div class="label" data-anim>LIVE RELAY</div>
+    <h1 class="h-title wide" style="font-size:2.6vw;color:#fff;" data-anim>지금, 이 화면으로 실물을 보여드립니다</h1>
+
+    <div class="lr-monitor" id="lrMonitor" data-anim>
+      <video class="lr-video" id="lrVideo" autoplay playsinline muted></video>
+      <div class="lr-mon-tally" id="lrMonTally"></div>
+      <div class="lr-mon-marks" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="lr-mon-chip"><span class="dot" id="lrDot"></span><span id="lrBadgeState">연결 대기</span></div>
+      <button type="button" class="lr-mon-full" id="lrBtnFull" data-no-advance title="전체화면 (F)">⛶ 전체화면</button>
+      <div class="lr-mon-standby" id="lrStandby">
+        <h3>실시간 화면 중계 대기 중</h3>
+        <p>오른쪽 QR을 스마트폰으로 찍고 방송을 시작하면, 이 화면이 실시간 영상으로 바뀝니다.</p>
+      </div>
+    </div>
+
+    <div class="lr-connect" data-anim>
+      <div class="lr-connect-label">CONNECT · 폰 카메라 연결</div>
+      <div class="lr-connect-qr lr-empty" id="lrPlaque">코드 생성 중…</div>
+      <div class="lr-connect-room">ROOM <b id="lrRoomCode">······</b></div>
+      <p class="lr-connect-help">스마트폰 카메라 앱으로 QR을 찍고<br>뜨는 페이지에서 <b style="color:#fff;">방송 시작</b>을 누르세요.</p>
+    </div>
+
+    <div class="pgnum">06</div>
+  </section>
+
+  <!-- 7 · 기술 파이프라인 (L-03/04 hybrid, dark) -->
+  <section class="slide slide--dark" data-index="7">
     <div class="label" data-anim>TECHNOLOGY</div>
     <h1 class="h-title wide" style="color:#fff;" data-anim>BLE·엣지·개별제어, 하나의 파이프라인</h1>
     <div style="position:absolute;left:var(--m);top:26vh;width:88vw;display:grid;grid-template-columns:repeat(4,1fr);gap:1.4vw;z-index:2;" data-anim>
@@ -246,11 +289,11 @@
       <tr style="border-color:rgba(255,255,255,.14);"><td>설치·관리 선택</td><td>X</td><td>X</td><td>O</td></tr>
     </table>
     <div class="foot" style="top:86.5vh;width:80vw;color:rgba(255,255,255,.6);" data-anim>MVP에서는 방·구역 판단 가능성을 구현했으며, 출시모델에서 5가구·30일 실증으로 정확도와 오판율을 검증합니다.</div>
-    <div class="pgnum">06</div>
+    <div class="pgnum">07</div>
   </section>
 
-  <!-- 7 · 경제효과 (L-04, 6/6) -->
-  <section class="slide" data-index="7">
+  <!-- 8 · 경제효과 (L-04, 6/6) -->
+  <section class="slide" data-index="8">
     <div class="label" data-anim>IMPACT</div>
     <h1 class="h-title" data-anim>연 344.4kWh,<br>빈 방 관리의 가능성</h1>
     <div class="metric" style="left:var(--m);top:52vh;color:var(--ink);" data-anim>
@@ -281,11 +324,11 @@
       <line x1="270" y1="20" x2="305" y2="20" stroke="var(--mint)" stroke-width="5.5"/><text x="315" y="27" font-family="Paperlogy" font-size="19" fill="var(--ink)">BIUM 적용</text>
     </svg>
     <div class="src" data-anim>출처: 국가에너지통계종합정보시스템(2023) · 2026년 주택용 저압요금 기준 시나리오</div>
-    <div class="pgnum">07</div>
+    <div class="pgnum">08</div>
   </section>
 
-  <!-- 8 · 비즈니스 모델 (L-04, 3카드) -->
-  <section class="slide" data-index="8">
+  <!-- 9 · 비즈니스 모델 (L-04, 3카드) -->
+  <section class="slide" data-index="9">
     <div class="label" data-anim>BUSINESS MODEL</div>
     <h1 class="h-title wide" data-anim>제품은 구매하고, 관리는 선택합니다</h1>
     <div style="position:absolute;left:var(--m);top:31vh;width:88vw;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6vw;z-index:2;">
@@ -318,11 +361,11 @@
       </div>
     </div>
     <div class="src" data-anim>하드웨어 판매 + 선택형 앱 구독 + 방문 관리형 월요금</div>
-    <div class="pgnum">08</div>
+    <div class="pgnum">09</div>
   </section>
 
-  <!-- 9 · 시장진입·성장 (custom horizontal flow) -->
-  <section class="slide" data-index="9">
+  <!-- 10 · 시장진입·성장 (custom horizontal flow) -->
+  <section class="slide" data-index="10">
     <div class="label" data-anim>GO-TO-MARKET</div>
     <h1 class="h-title wide" data-anim>진주 5가구에서 시작해 전국으로</h1>
     <div style="position:absolute;left:var(--m);top:31vh;width:88vw;display:flex;align-items:center;z-index:2;" data-anim>
@@ -347,11 +390,11 @@
       </div>
     </div>
     <div class="src" data-anim>초기 고객획득: 지역 전기·가전 전문업체 · 대학 네트워크 · 아파트·학부모 커뮤니티 · 기존 고객 추천</div>
-    <div class="pgnum">09</div>
+    <div class="pgnum">10</div>
   </section>
 
-  <!-- 10 · FUNDING ROADMAP -->
-  <section class="slide" data-index="10">
+  <!-- 11 · FUNDING ROADMAP -->
+  <section class="slide" data-index="11">
     <div class="label" data-anim>FUNDING ROADMAP</div>
     <h1 class="h-title wide" style="font-size:2.5vw;" data-anim>자비 300만원으로 시작해,<br>단계별 외부자금을 연결합니다</h1>
     <p class="lead" data-anim style="top:29vh;width:58vw;font-size:1.1vw;">초기 검증 → 출시모델 실증 → 인증·양산으로 이어지는 조달 실행계획</p>
@@ -396,11 +439,11 @@
     </div>
 
     <div class="foot" style="top:88.5vh;width:84vw;" data-anim>지원금은 확정수입이 아니며, 모집일정·지원한도·중복수혜·자부담 조건은 2027년 공고 시 재확인합니다.</div>
-    <div class="pgnum">10</div>
+    <div class="pgnum">11</div>
   </section>
 
-  <!-- 11 · 클로징 (FUNDING & TEAM) -->
-  <section class="slide slide--dark" data-index="11">
+  <!-- 12 · 클로징 (FUNDING & TEAM) -->
+  <section class="slide slide--dark" data-index="12">
     <div class="label" data-anim>FUNDING &amp; TEAM</div>
     <div data-anim style="position:absolute;left:var(--m);top:13vh;width:66vw;font:800 2.9vw/1.35 'Paperlogy',sans-serif;letter-spacing:-.02em;">
       <div style="color:#fff;">저희가 먼저 300만원을 투자했습니다</div>
@@ -462,11 +505,11 @@
       <div style="margin-top:.6vh;font:500 .85vw/1.6 'Paperlogy',sans-serif;color:rgba(255,255,255,.55);">사용 의향과 추천 가구 정보를<br>남겨주세요</div>
     </div>
 
-    <div class="pgnum">11</div>
+    <div class="pgnum">12</div>
   </section>
 
-  <!-- 12 · CLOSING THANK YOU -->
-  <section class="slide slide--dark" data-index="12">
+  <!-- 13 · CLOSING THANK YOU -->
+  <section class="slide slide--dark" data-index="13">
     <div class="label" data-anim>THANK YOU</div>
     <img src="asset/00_BIUM_아이콘_고해상도.png" alt="BIUM 아이콘" data-anim style="position:absolute;right:var(--m);top:34vh;width:9vw;height:9vw;object-fit:contain;" />
     <div data-anim style="position:absolute;left:var(--m);top:40vh;font:800 7vw/1.15 'Paperlogy',sans-serif;letter-spacing:-.02em;color:#fff;">감사합니다.</div>
@@ -474,8 +517,8 @@
     <div data-anim style="position:absolute;left:var(--m);top:61.5vh;font:600 1.75vw/1 'Space Grotesk',sans-serif;letter-spacing:.11em;color:rgba(255,255,255,.72);">TEAM JACHAIN</div>
   </section>
 
-  <!-- 13 · 부록1 시스템 기술 아키텍처 -->
-  <section class="slide" data-index="13">
+  <!-- 14 · 부록1 시스템 기술 아키텍처 -->
+  <section class="slide" data-index="14">
     <div class="label" data-anim>APPENDIX 01 · 시스템 기술 아키텍처</div>
     <h1 class="h-title wide" style="font-size:2.8vw;" data-anim>스마트폰 BLE → 허브 → 개별제어 → 앱</h1>
     <div style="position:absolute;left:var(--m);top:29vh;width:41vw;z-index:2;" data-anim>
@@ -491,8 +534,8 @@
     <div class="pgnum">부록 01</div>
   </section>
 
-  <!-- 14 · 부록2 안전 기본값 -->
-  <section class="slide" data-index="14">
+  <!-- 15 · 부록2 안전 기본값 -->
+  <section class="slide" data-index="15">
     <div class="label" data-anim>APPENDIX 02 · 안전 기본값과 자동제어 제외기기</div>
     <h1 class="h-title wide" style="font-size:2.8vw;" data-anim>허용한 기기만, 신뢰도가 낮으면 확인부터</h1>
     <ul style="position:absolute;left:var(--m);top:31vh;width:80vw;margin:0;padding-left:1.3vw;font:500 1.4vw/2.2 'Paperlogy',sans-serif;color:var(--ink);z-index:2;" data-anim>
@@ -507,8 +550,8 @@
     <div class="pgnum">부록 02</div>
   </section>
 
-  <!-- 15 · 부록3 전력량 계산 근거 -->
-  <section class="slide" data-index="15">
+  <!-- 16 · 부록3 전력량 계산 근거 -->
+  <section class="slide" data-index="16">
     <div class="label" data-anim>APPENDIX 03 · 전력량·전기요금 계산 근거</div>
     <h1 class="h-title wide" style="font-size:2.8vw;" data-anim>3인 가구 계산 시나리오의 구성</h1>
     <table class="mini" style="position:absolute;left:var(--m);top:31vh;width:47vw;z-index:2;" data-anim>
@@ -527,8 +570,8 @@
     <div class="pgnum">부록 03</div>
   </section>
 
-  <!-- 16 · 부록4 경쟁사 상세 -->
-  <section class="slide" data-index="16">
+  <!-- 17 · 부록4 경쟁사 상세 -->
+  <section class="slide" data-index="17">
     <div class="label" data-anim>APPENDIX 04 · 경쟁사 가격·기능 상세</div>
     <h1 class="h-title wide" style="font-size:2.6vw;" data-anim>O 기본제공 · △ 부분제공 · X 미제공</h1>
     <table class="mini" style="position:absolute;left:var(--m);top:27vh;width:90vw;z-index:2;" data-anim>
@@ -548,8 +591,8 @@
     <div class="pgnum">부록 04</div>
   </section>
 
-  <!-- 17 · 부록5 BOM/CAC -->
-  <section class="slide" data-index="17">
+  <!-- 18 · 부록5 BOM/CAC -->
+  <section class="slide" data-index="18">
     <div class="label" data-anim>APPENDIX 05 · BOM·마진·CAC·방문원가</div>
     <h1 class="h-title wide" style="font-size:2.8vw;" data-anim>목표 부품원가와 단위경제 가정</h1>
     <table class="mini" style="position:absolute;left:var(--m);top:28vh;width:58vw;z-index:2;" data-anim>
@@ -567,8 +610,8 @@
     <div class="pgnum">부록 05</div>
   </section>
 
-  <!-- 18 · 부록6 문제·시장·화재 통계 -->
-  <section class="slide" data-index="18">
+  <!-- 19 · 부록6 문제·시장·화재 통계 -->
+  <section class="slide" data-index="19">
     <div class="label" data-anim>APPENDIX 06 · 문제·시장·화재 통계</div>
     <h1 class="h-title wide" style="font-size:2.8vw;" data-anim>BIUM은 소방설비가 아닙니다</h1>
     <ul style="position:absolute;left:var(--m);top:29vh;width:44vw;margin:0;padding-left:1.3vw;font:500 1.25vw/2.1 'Paperlogy',sans-serif;color:var(--ink);z-index:2;" data-anim>
@@ -586,8 +629,8 @@
     <div class="pgnum">부록 06</div>
   </section>
 
-  <!-- 19 · 부록7 팀 수상·이력 -->
-  <section class="slide" data-index="19">
+  <!-- 20 · 부록7 팀 수상·이력 -->
+  <section class="slide" data-index="20">
     <div class="label" data-anim>APPENDIX 07 · 팀 수상·이력</div>
     <h1 class="h-title wide" style="font-size:2.6vw;" data-anim>메이커톤 이전부터 쌓아온 실행 이력</h1>
     <div style="position:absolute;left:var(--m);top:30vh;width:88vw;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6vw;z-index:2;">
@@ -623,7 +666,7 @@
 </div>
 
 <div id="progress-track"><div id="progress-fill"></div></div>
-<div id="progress-badge">1 / 20</div>
+<div id="progress-badge">1 / 21</div>
 
 <script>
 (function () {
@@ -710,6 +753,20 @@
     return out;
   }
 
+  // Fullscreen wiring lives outside the PeerJS guard below so it still works
+  // even if the CDN is blocked at the venue.
+  var monitorEl = document.getElementById('lrMonitor');
+  var fullBtn = document.getElementById('lrBtnFull');
+  function toggleFull() {
+    if (!monitorEl) return;
+    if (document.fullscreenElement) document.exitFullscreen();
+    else monitorEl.requestFullscreen?.().catch(function () {});
+  }
+  if (fullBtn) fullBtn.addEventListener('click', toggleFull);
+  document.addEventListener('keydown', function (e) {
+    if (e.key.toLowerCase() === 'f' && document.querySelector('.slide.active #lrMonitor')) toggleFull();
+  });
+
   // No network / CDN blocked at the venue — badge stays on "연결 대기" and the
   // static pipeline image underneath keeps showing. Never breaks the slide.
   if (typeof Peer === 'undefined') return;
@@ -720,6 +777,8 @@
   var stateEl = document.getElementById('lrBadgeState');
   var plaque = document.getElementById('lrPlaque');
   var roomEl = document.getElementById('lrRoomCode');
+  var tally = document.getElementById('lrMonTally');
+  var standby = document.getElementById('lrStandby');
   var castUrl = CASTER_BASE + '?role=cast&room=' + room;
 
   roomEl.textContent = room;
@@ -749,6 +808,8 @@
       video.srcObject = stream;
       video.play().catch(function () {});
       video.classList.add('is-live');
+      tally.classList.add('is-live');
+      standby.classList.add('is-live');
       dot.classList.add('pulse');
       dot.style.background = 'var(--mint)';
       stateEl.textContent = 'LIVE';
@@ -756,6 +817,8 @@
     call.on('close', function () {
       video.classList.remove('is-live');
       video.srcObject = null;
+      tally.classList.remove('is-live');
+      standby.classList.remove('is-live');
       dot.classList.remove('pulse');
       dot.style.background = 'var(--cyan)';
       stateEl.textContent = '연결 대기';
