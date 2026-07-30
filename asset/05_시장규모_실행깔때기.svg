@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0D9488"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4F7CFF"/>
+    </marker>
+    <style>
+      text { font-family: "Pretendard", "Malgun Gothic", Arial, sans-serif; }
+      .title { font-size: 30px; font-weight: 800; fill: #102A43; }
+      .subtitle { font-size: 15px; font-weight: 500; fill: #52616F; }
+      .h { font-size: 20px; font-weight: 800; fill: #102A43; }
+      .b { font-size: 15px; font-weight: 600; fill: #263442; }
+      .s { font-size: 13px; font-weight: 500; fill: #52616F; }
+      .xs { font-size: 11px; font-weight: 500; fill: #52616F; }
+      .num { font-size: 31px; font-weight: 900; fill: #102A43; }
+      .white { fill: #FFFFFF; }
+    </style>
+  </defs>
+  <rect width="1200" height="420" rx="24" fill="#FFFFFF"/>
+  <text x="46" y="55" class="title">시장규모와 1년차 실행목표</text>
+  <text x="46" y="83" class="subtitle">TAM·SAM은 잠재 고객 규모, SOM은 팀이 1년차에 확보할 실행목표</text>
+
+  <polygon points="75,125 780,125 700,205 155,205" fill="#E9EFFF" stroke="#4F7CFF" stroke-width="2"/>
+  <text x="425" y="161" text-anchor="middle" class="h">TAM · 전국의 잠재고객</text>
+  <text x="425" y="190" text-anchor="middle" class="b">초등학생 자녀 맞벌이 가구 · 85.9만 가구</text>
+  <polygon points="155,220 700,220 620,300 235,300" fill="#E8F7F4" stroke="#0D9488" stroke-width="2"/>
+  <text x="425" y="254" text-anchor="middle" class="h">SAM · 당장 접근 가능한 고객</text>
+  <text x="425" y="283" text-anchor="middle" class="b">진주시 동일조건 추정가구 · 약 6,249가구</text>
+  <polygon points="235,315 620,315 565,385 290,385" fill="#FFF4D6" stroke="#B45309" stroke-width="2"/>
+  <text x="425" y="348" text-anchor="middle" class="h">SOM · 1년 안에 확보할 고객</text>
+  <text x="425" y="375" text-anchor="middle" class="b">50가구 (셀프 30+방문 20)</text>
+
+  <rect x="835" y="125" width="315" height="260" rx="22" fill="#F4F7FA" stroke="#E5EAF0" filter="url(#shadow)"/>
+  <text x="875" y="170" class="h">SOM 매출 계산</text>
+  <text x="875" y="218" class="num">30가구</text>
+  <text x="1000" y="214" class="b">셀프 설치형</text>
+  <text x="875" y="278" class="num">20가구</text>
+  <text x="1000" y="274" class="b">방문 관리형</text>
+  <line x1="875" y1="305" x2="1110" y2="305" stroke="#CBD5DF" stroke-width="2"/>
+  <text x="875" y="342" class="b">합계 11,546,000원</text>
+  <text x="875" y="367" class="s">SOM은 진주 SAM의 약 0.8%</text>
+
+</svg>

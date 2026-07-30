@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="620" viewBox="0 0 1440 620">
+  <defs>
+    <style>
+      .bg { fill: #FFFFFF; }
+      .title { font: 700 30px "Pretendard", "Noto Sans KR", sans-serif; fill: #102A43; }
+      .sub { font: 500 16px "Pretendard", "Noto Sans KR", sans-serif; fill: #52616F; }
+      .box { fill: #FFFFFF; stroke: #CBD5DF; stroke-width: 2; }
+      .box-main { fill: #E8F7F4; stroke: #0D9488; stroke-width: 3; }
+      .box-alert { fill: #FFF4D6; stroke: #B45309; stroke-width: 3; }
+      .label { font: 700 19px "Pretendard", "Noto Sans KR", sans-serif; fill: #102A43; text-anchor: middle; }
+      .small { font: 500 14px "Pretendard", "Noto Sans KR", sans-serif; fill: #52616F; text-anchor: middle; }
+      .tag { font: 700 13px "Pretendard", "Noto Sans KR", sans-serif; fill: #FFFFFF; text-anchor: middle; }
+      .arrow { fill: none; stroke: #52616F; stroke-width: 3; marker-end: url(#arrow); }
+      .arrow-alert { fill: none; stroke: #B45309; stroke-width: 3; marker-end: url(#arrow-alert); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#52616F"/>
+    </marker>
+    <marker id="arrow-alert" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#B45309"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1440" height="620" rx="24"/>
+  <text class="title" x="70" y="62">BIUM 서비스 로직</text>
+  <text class="sub" x="70" y="91">방의 실사용 판단 → 허용 기기만 제어 → 순절감과 관리 결과 확인</text>
+
+  <rect x="70" y="150" width="180" height="112" rx="18" class="box"/>
+  <text class="label" x="160" y="194">스마트폰 BLE</text>
+  <text class="small" x="160" y="224">사용자 식별 신호</text>
+
+  <rect x="300" y="150" width="180" height="112" rx="18" class="box"/>
+  <text class="label" x="390" y="194">집 안 허브</text>
+  <text class="small" x="390" y="224">로컬 엣지 판단</text>
+
+  <rect x="530" y="150" width="190" height="112" rx="18" class="box-main"/>
+  <text class="label" x="625" y="194">사용 중인 방 판단</text>
+  <text class="small" x="625" y="224">BLE RSSI 기반</text>
+
+  <rect x="770" y="150" width="200" height="112" rx="18" class="box-main"/>
+  <text class="label" x="870" y="194">제어 가능 기기 확인</text>
+  <text class="small" x="870" y="224">차단 허용 목록만</text>
+
+  <rect x="1020" y="150" width="170" height="112" rx="18" class="box-main"/>
+  <text class="label" x="1105" y="194">불필요 작동 감소</text>
+  <text class="small" x="1105" y="224">빈 방·외출 시 OFF</text>
+
+  <rect x="1240" y="150" width="150" height="112" rx="18" class="box"/>
+  <text class="label" x="1315" y="194">결과 표시</text>
+  <text class="small" x="1315" y="220">kWh·원·순절감</text>
+
+  <path d="M250 206 H300" class="arrow"/>
+  <path d="M480 206 H530" class="arrow"/>
+  <path d="M720 206 H770" class="arrow"/>
+  <path d="M970 206 H1020" class="arrow"/>
+  <path d="M1190 206 H1240" class="arrow"/>
+
+  <rect x="770" y="365" width="200" height="108" rx="18" class="box-alert"/>
+  <text class="label" x="870" y="408">이상 신호 알림</text>
+  <text class="small" x="870" y="438">전류·온도 이상신호 · 출시목표</text>
+
+  <rect x="1030" y="365" width="180" height="108" rx="18" class="box-alert"/>
+  <text class="label" x="1120" y="408">자사 장비 교체</text>
+  <text class="small" x="1120" y="438">점검·상태 기반</text>
+
+  <rect x="1270" y="365" width="150" height="108" rx="18" class="box-alert"/>
+  <text class="label" x="1345" y="401">전문업체</text>
+  <text class="label" x="1345" y="428">연결</text>
+  <text class="small" x="1345" y="454">건물 설비 문제</text>
+
+  <path d="M870 262 V365" class="arrow-alert"/>
+  <path d="M970 419 H1030" class="arrow-alert"/>
+  <path d="M1210 419 H1270" class="arrow-alert"/>
+
+  <rect x="70" y="530" width="288" height="38" rx="19" fill="#102A43"/>
+  <text class="tag" x="214" y="554">자동 차단 부적합 기기 제외</text>
+  <rect x="378" y="530" width="288" height="38" rx="19" fill="#102A43"/>
+  <text class="tag" x="522" y="554">판단 신뢰도가 낮으면 확인 요청</text>
+  <rect x="686" y="530" width="288" height="38" rx="19" fill="#102A43"/>
+  <text class="tag" x="830" y="554">통신 장애 시 기존 상태·안전모드</text>
+  <rect x="994" y="530" width="356" height="38" rx="19" fill="#102A43"/>
+  <text class="tag" x="1172" y="554">건물 배선·분전반은 전문업체 영역</text>
+</svg>

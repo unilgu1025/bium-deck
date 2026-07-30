@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="430" viewBox="0 0 1400 430">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#102A43" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      text { font-family: "Pretendard", "Malgun Gothic", Arial, sans-serif; }
+      .title { font-size: 28px; font-weight: 800; fill: #102A43; }
+      .subtitle { font-size: 14px; font-weight: 500; fill: #52616F; }
+      .tagText { font-size: 17px; font-weight: 800; text-anchor: middle; }
+      .desc { font-size: 15px; font-weight: 600; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="430" rx="24" fill="#FFFFFF"/>
+  <text x="55" y="55" class="title">BIUM 출시모델 핵심가치</text>
+  <text x="55" y="82" class="subtitle">절전·안심·편의·ESG 네 가지 가치를 출시모델 기준으로 제공</text>
+
+  <!-- Card 1: 절전 (teal) -->
+  <rect x="55" y="110" width="300" height="280" rx="20" fill="#E8F7F4" stroke="#0D9488" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="79" y="134" width="100" height="36" rx="18" fill="#0D9488"/>
+  <text x="129" y="158" class="tagText" fill="#FFFFFF">절전</text>
+  <text x="205" y="216" class="desc" fill="#102A43">허용한 기기만</text>
+  <text x="205" y="240" class="desc" fill="#102A43">자동 OFF</text>
+  <text x="205" y="278" class="desc" fill="#102A43">공간·기기별 관리 전력량</text>
+  <text x="205" y="302" class="desc" fill="#102A43">전기요금 감소액 실측 제공</text>
+
+  <!-- Card 2: 안심 (amber) -->
+  <rect x="385" y="110" width="300" height="280" rx="20" fill="#FFF4D6" stroke="#B45309" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="409" y="134" width="100" height="36" rx="18" fill="#B45309"/>
+  <text x="459" y="158" class="tagText" fill="#FFFFFF">안심</text>
+  <text x="535" y="216" class="desc" fill="#102A43">전류·온도</text>
+  <text x="535" y="240" class="desc" fill="#102A43">이상신호 알림</text>
+  <text x="535" y="278" class="desc" fill="#102A43">이상 의심 시 자사 장비 교체</text>
+  <text x="535" y="302" class="desc" fill="#102A43">또는 전문업체 연결</text>
+
+  <!-- Card 3: 편의 (blue) -->
+  <rect x="715" y="110" width="300" height="280" rx="20" fill="#E9EFFF" stroke="#4F7CFF" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="739" y="134" width="100" height="36" rx="18" fill="#4F7CFF"/>
+  <text x="789" y="158" class="tagText" fill="#FFFFFF">편의</text>
+  <text x="865" y="216" class="desc" fill="#102A43">반복적인</text>
+  <text x="865" y="240" class="desc" fill="#102A43">수동확인 감소</text>
+  <text x="865" y="278" class="desc" fill="#102A43">월간 절감·관리 리포트로</text>
+  <text x="865" y="302" class="desc" fill="#102A43">결과 확인</text>
+
+  <!-- Card 4: ESG·순환관리 (navy solid) -->
+  <rect x="1045" y="110" width="300" height="280" rx="20" fill="#102A43" filter="url(#shadow)"/>
+  <rect x="1069" y="134" width="140" height="36" rx="18" fill="#FFFFFF"/>
+  <text x="1139" y="158" class="tagText" fill="#102A43">ESG·순환관리</text>
+  <text x="1195" y="216" class="desc" fill="#FFFFFF">상태 기반으로</text>
+  <text x="1195" y="240" class="desc" fill="#FFFFFF">장비 장기 사용</text>
+  <text x="1195" y="278" class="desc" fill="#FFFFFF">이상 제품 회수·교체,</text>
+  <text x="1195" y="302" class="desc" fill="#FFFFFF">48개월 후 소유권 이전</text>
+
+</svg>

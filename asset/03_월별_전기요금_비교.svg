@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">BIUM 적용 전후 3인 가구 월별 전기요금 비교</title>
+  <desc id="desc">2026년 주택용 저압 요금 기준 시나리오. BIUM 적용 전과 적용 후 월별 예상 전기요금의 차이를 표시한다.</desc>
+  <style>
+    text { font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+    .title { font-size: 34px; font-weight: 800; fill: #102A43; }
+    .subtitle { font-size: 17px; fill: #52616F; }
+    .kpi-label { font-size: 16px; font-weight: 700; fill: #52616F; }
+    .kpi-value { font-size: 29px; font-weight: 850; fill: #0D9488; }
+    .grid { stroke: #E5EAF0; stroke-width: 1; stroke-dasharray: 5 7; }
+    .axis { stroke: #94A3B8; stroke-width: 1.3; }
+    .axis-label { font-size: 15px; fill: #52616F; }
+    .before-line { fill: none; stroke: #94A3B8; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .after-line { fill: none; stroke: #0D9488; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .before-dot { fill: #ffffff; stroke: #94A3B8; stroke-width: 4; }
+    .after-dot { fill: #ffffff; stroke: #0D9488; stroke-width: 4; }
+    .saving-area { fill: #0D9488; opacity: 0.15; }
+    .saving-line { stroke: #B45309; stroke-width: 2.5; stroke-dasharray: 5 5; }
+    .saving-pill { fill: #FFF4D6; stroke: #B45309; stroke-width: 1.5; }
+    .saving-text { font-size: 15px; font-weight: 800; fill: #B45309; }
+    .legend { font-size: 16px; font-weight: 700; fill: #52616F; }
+    .footnote { font-size: 13px; fill: #52616F; }
+  </style>
+  <rect width="1400" height="760" rx="28" fill="#ffffff"/>
+  <text x="105" y="55" class="title">BIUM 적용 전후 3인 가구 월별 전기요금 비교</text>
+  <text x="105" y="86" class="subtitle">2026년 주택용 저압 요금 기준 시나리오 · 제품가격과 구독료 제외</text>
+
+  <rect x="105" y="112" width="560" height="78" rx="18" fill="#E8F7F4" stroke="#0D9488"/>
+  <text x="129" y="140" class="kpi-label">연간 관리 전력량</text>
+  <text x="129" y="174" class="kpi-value">344.4kWh  ↓ 9.5%</text>
+
+  <rect x="690" y="112" width="560" height="78" rx="18" fill="#E8F7F4" stroke="#0D9488"/>
+  <text x="714" y="140" class="kpi-label">연간 예상 전기요금 차이</text>
+  <text x="714" y="174" class="kpi-value">88,909원  ↓ 13.1%</text>
+
+  
+  <line x1="105" y1="600.625" x2="1345" y2="600.625" class="grid"/>
+  <text x="89" y="606.625" class="axis-label" text-anchor="end">40천원</text>
+
+  <line x1="105" y1="491.875" x2="1345" y2="491.875" class="grid"/>
+  <text x="89" y="497.875" class="axis-label" text-anchor="end">50천원</text>
+
+  <line x1="105" y1="383.125" x2="1345" y2="383.125" class="grid"/>
+  <text x="89" y="389.125" class="axis-label" text-anchor="end">60천원</text>
+
+  <line x1="105" y1="274.375" x2="1345" y2="274.375" class="grid"/>
+  <text x="89" y="280.375" class="axis-label" text-anchor="end">70천원</text>
+
+  <line x1="105" y1="655" x2="1345" y2="655" class="axis"/>
+  
+  <line x1="105" y1="655" x2="105" y2="663" class="axis"/>
+  <text x="105" y="689" class="axis-label" text-anchor="middle">1월</text>
+
+  <line x1="217.72727272727275" y1="655" x2="217.72727272727275" y2="663" class="axis"/>
+  <text x="217.72727272727275" y="689" class="axis-label" text-anchor="middle">2월</text>
+
+  <line x1="330.4545454545455" y1="655" x2="330.4545454545455" y2="663" class="axis"/>
+  <text x="330.4545454545455" y="689" class="axis-label" text-anchor="middle">3월</text>
+
+  <line x1="443.1818181818182" y1="655" x2="443.1818181818182" y2="663" class="axis"/>
+  <text x="443.1818181818182" y="689" class="axis-label" text-anchor="middle">4월</text>
+
+  <line x1="555.909090909091" y1="655" x2="555.909090909091" y2="663" class="axis"/>
+  <text x="555.909090909091" y="689" class="axis-label" text-anchor="middle">5월</text>
+
+  <line x1="668.6363636363636" y1="655" x2="668.6363636363636" y2="663" class="axis"/>
+  <text x="668.6363636363636" y="689" class="axis-label" text-anchor="middle">6월</text>
+
+  <line x1="781.3636363636364" y1="655" x2="781.3636363636364" y2="663" class="axis"/>
+  <text x="781.3636363636364" y="689" class="axis-label" text-anchor="middle">7월</text>
+
+  <line x1="894.0909090909091" y1="655" x2="894.0909090909091" y2="663" class="axis"/>
+  <text x="894.0909090909091" y="689" class="axis-label" text-anchor="middle">8월</text>
+
+  <line x1="1006.8181818181819" y1="655" x2="1006.8181818181819" y2="663" class="axis"/>
+  <text x="1006.8181818181819" y="689" class="axis-label" text-anchor="middle">9월</text>
+
+  <line x1="1119.5454545454545" y1="655" x2="1119.5454545454545" y2="663" class="axis"/>
+  <text x="1119.5454545454545" y="689" class="axis-label" text-anchor="middle">10월</text>
+
+  <line x1="1232.2727272727273" y1="655" x2="1232.2727272727273" y2="663" class="axis"/>
+  <text x="1232.2727272727273" y="689" class="axis-label" text-anchor="middle">11월</text>
+
+  <line x1="1345" y1="655" x2="1345" y2="663" class="axis"/>
+  <text x="1345" y="689" class="axis-label" text-anchor="middle">12월</text>
+
+  <polygon points="105.0,323.0 217.7,337.6 330.5,406.8 443.2,474.1 555.9,511.0 668.6,505.4 781.4,412.9 894.1,292.5 1006.8,390.6 1119.5,504.9 1232.3,473.5 1345.0,418.3 1345.0,493.1 1232.3,548.3 1119.5,573.8 1006.8,459.5 894.1,418.5 781.4,541.0 668.6,574.4 555.9,580.0 443.2,543.0 330.5,475.7 217.7,412.4 105.0,397.8" class="saving-area"/>
+  <path d="M 105.0 323.0 L 217.7 337.6 L 330.5 406.8 L 443.2 474.1 L 555.9 511.0 L 668.6 505.4 L 781.4 412.9 L 894.1 292.5 L 1006.8 390.6 L 1119.5 504.9 L 1232.3 473.5 L 1345.0 418.3" class="before-line"/>
+  <path d="M 105.0 397.8 L 217.7 412.4 L 330.5 475.7 L 443.2 543.0 L 555.9 580.0 L 668.6 574.4 L 781.4 541.0 L 894.1 418.5 L 1006.8 459.5 L 1119.5 573.8 L 1232.3 548.3 L 1345.0 493.1" class="after-line"/>
+  <circle cx="105" cy="323.040625" r="5.5" class="before-dot"/><circle cx="217.72727272727275" cy="337.61312499999997" r="5.5" class="before-dot"/><circle cx="330.4545454545455" cy="406.81075" r="5.5" class="before-dot"/><circle cx="443.1818181818182" cy="474.06174999999996" r="5.5" class="before-dot"/><circle cx="555.909090909091" cy="511.03675000000004" r="5.5" class="before-dot"/><circle cx="668.6363636363636" cy="505.436125" r="5.5" class="before-dot"/><circle cx="781.3636363636364" cy="412.933375" r="5.5" class="before-dot"/><circle cx="894.0909090909091" cy="292.460125" r="5.5" class="before-dot"/><circle cx="1006.8181818181819" cy="390.5635" r="5.5" class="before-dot"/><circle cx="1119.5454545454545" cy="504.8815" r="5.5" class="before-dot"/><circle cx="1232.2727272727273" cy="473.49625000000003" r="5.5" class="before-dot"/><circle cx="1345" cy="418.30562499999996" r="5.5" class="before-dot"/>
+  <circle cx="105" cy="397.84975" r="5.5" class="after-dot"/><circle cx="217.72727272727275" cy="412.42225" r="5.5" class="after-dot"/><circle cx="330.4545454545455" cy="475.7365" r="5.5" class="after-dot"/><circle cx="443.1818181818182" cy="542.976625" r="5.5" class="after-dot"/><circle cx="555.909090909091" cy="579.9625000000001" r="5.5" class="after-dot"/><circle cx="668.6363636363636" cy="574.361875" r="5.5" class="after-dot"/><circle cx="781.3636363636364" cy="540.975625" r="5.5" class="after-dot"/><circle cx="894.0909090909091" cy="418.534" r="5.5" class="after-dot"/><circle cx="1006.8181818181819" cy="459.48924999999997" r="5.5" class="after-dot"/><circle cx="1119.5454545454545" cy="573.796375" r="5.5" class="after-dot"/><circle cx="1232.2727272727273" cy="548.3053749999999" r="5.5" class="after-dot"/><circle cx="1345" cy="493.11475" r="5.5" class="after-dot"/>
+  
+    <line x1="781.3636363636364" y1="420.933375" x2="781.3636363636364" y2="532.975625" class="saving-line"/>
+    <rect x="720.3636363636364" y="456.95450000000005" width="122" height="40" rx="20" class="saving-pill"/>
+    <text x="781.3636363636364" y="483.95450000000005" class="saving-text" text-anchor="middle">-11,774원</text>
+  
+    <line x1="894.0909090909091" y1="300.460125" x2="894.0909090909091" y2="410.534" class="saving-line"/>
+    <rect x="833.0909090909091" y="335.49706249999997" width="122" height="40" rx="20" class="saving-pill"/>
+    <text x="894.0909090909091" y="362.49706249999997" class="saving-text" text-anchor="middle">-11,593원</text>
+  
+
+  <line x1="445" y1="712" x2="490" y2="712" class="before-line"/>
+  <text x="505" y="719" class="legend">BIUM 미적용</text>
+  <line x1="715" y1="712" x2="760" y2="712" class="after-line"/>
+  <text x="775" y="719" class="legend">BIUM 적용</text>
+  <rect x="970" y="699" width="42" height="24" rx="6" class="saving-area"/>
+  <text x="1027" y="719" class="legend">관리로 감소한 요금</text>
+
+  <text x="1345" y="749" class="footnote" text-anchor="end">3인 가구 공식 연간 사용량과 월별 계절 패턴을 결합한 추정치 · 실제 절감액은 가구별로 다름</text>
+</svg>

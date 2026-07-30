@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="760" viewBox="0 0 1440 760">
+  <defs>
+    <style>
+      .bg { fill: #FFFFFF; }
+      .title { font: 700 30px "Pretendard", "Noto Sans KR", sans-serif; fill: #102A43; }
+      .sub { font: 500 16px "Pretendard", "Noto Sans KR", sans-serif; fill: #52616F; }
+      .head { fill: #102A43; }
+      .headText { font: 700 16px "Pretendard", "Noto Sans KR", sans-serif; fill: #FFFFFF; text-anchor: middle; }
+      .rowText { font: 700 17px "Pretendard", "Noto Sans KR", sans-serif; fill: #102A43; }
+      .rowSub { font: 500 13px "Pretendard", "Noto Sans KR", sans-serif; fill: #52616F; }
+      .grid { stroke: #E5EAF0; stroke-width: 1; }
+      .bar1 { fill: #0D9488; }
+      .bar2 { fill: #4F7CFF; }
+      .bar3 { fill: #B45309; }
+      .bar4 { fill: #0D9488; }
+      .barText { font: 700 14px "Pretendard", "Noto Sans KR", sans-serif; fill: #FFFFFF; text-anchor: middle; }
+      .note { font: 500 14px "Pretendard", "Noto Sans KR", sans-serif; fill: #52616F; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1440" height="760" rx="24"/>
+  <text class="title" x="70" y="60">BIUM 향후 1년 자금조달·실증 계획</text>
+  <text class="sub" x="70" y="90">2026년 공고를 기준으로 준비하되, 2027년 모집일정·중복수혜 조건은 공고 시 재확인</text>
+
+  <rect x="420" y="125" width="920" height="54" rx="12" class="head"/>
+  <text class="headText" x="535" y="158">2026 Q3</text>
+  <text class="headText" x="765" y="158">2026 Q4</text>
+  <text class="headText" x="995" y="158">2027 Q1</text>
+  <text class="headText" x="1225" y="158">2027 Q2</text>
+
+  <line x1="420" y1="179" x2="420" y2="650" class="grid"/>
+  <line x1="650" y1="179" x2="650" y2="650" class="grid"/>
+  <line x1="880" y1="179" x2="880" y2="650" class="grid"/>
+  <line x1="1110" y1="179" x2="1110" y2="650" class="grid"/>
+  <line x1="1340" y1="179" x2="1340" y2="650" class="grid"/>
+
+  <text class="rowText" x="70" y="225">개인자금 300만원</text>
+  <text class="rowSub" x="70" y="248">MVP 통합·5가구 파일럿·사전검토</text>
+  <rect x="440" y="202" width="420" height="52" rx="12" class="bar1"/>
+  <text class="barText" x="650" y="234">A 통합 → 5가구 30일 실증</text>
+
+  <text class="rowText" x="70" y="302">공통 준비</text>
+  <text class="rowSub" x="70" y="325">측정데이터·견적·인증계획·고객증거</text>
+  <rect x="670" y="279" width="420" height="52" rx="12" class="bar2"/>
+  <text class="barText" x="880" y="311">A′ 사업화 증빙·지원서 준비</text>
+
+  <text class="rowText" x="70" y="379">예비창업패키지</text>
+  <text class="rowSub" x="70" y="402">최대 8천만원·예비창업자</text>
+  <rect x="900" y="356" width="420" height="52" rx="12" class="bar3"/>
+  <text class="barText" x="1110" y="388">신청 → 시제품·시험·실증</text>
+
+  <text class="rowText" x="70" y="456">창업중심대학</text>
+  <text class="rowSub" x="70" y="479">대학 기반 사업화·지역 검증</text>
+  <rect x="900" y="433" width="420" height="52" rx="12" class="bar3"/>
+  <text class="barText" x="1110" y="465">공고 확인 → 경상국립대 연계</text>
+
+  <text class="rowText" x="70" y="533">모두의 창업·에코스타트업</text>
+  <text class="rowSub" x="70" y="556">단계형 자금·절전/ESG 적합성 검증</text>
+  <rect x="900" y="510" width="420" height="52" rx="12" class="bar4"/>
+  <text class="barText" x="1110" y="542">재공고 확인 → 적합 트랙 신청</text>
+
+  <text class="rowText" x="70" y="610">청년창업사관학교</text>
+  <text class="rowSub" x="70" y="633">사업자등록 후 최대 1억원</text>
+  <rect x="1130" y="587" width="190" height="52" rx="12" class="bar4"/>
+  <text class="barText" x="1225" y="619">양산·판매 단계</text>
+
+  <text class="note" x="70" y="700">※ 지원금은 확정 수입이 아님. 2027년 공고일·자격·지원한도·동시수혜 제한을 다시 확인한 뒤 신청.</text>
+</svg>
